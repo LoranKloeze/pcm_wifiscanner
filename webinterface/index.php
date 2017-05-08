@@ -1,3 +1,11 @@
+<?php 
+/*
+ * PCM Wifiscanner
+ * 
+ * Copyright 2017 Loran Kloeze - loran@ralon.nl
+ * Licentie: MIT
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,7 +19,7 @@
   <body>
       <div class="container">          
         <h1>PCM Wifiscanner</h1>
-        <p>De onderstaande tabel laat mobile stations zien zoals telefoons/laptops/tablets e.d. die de afgelopen tijd zijn gevonden in de nabijheid van de Raspberry Pi. Elke regel toont het mac-adres  van het mobile station met daarachter de access points waar het mobile station recentelijk verbinding mee heeft gehad. </p>
+        <p>De onderstaande tabel laat mobile stations zien zoals telefoons/laptops/tablets e.d. die de afgelopen tijd zijn gevonden in de nabijheid van de Raspberry Pi. Elke regel toont het mac-adres van het mobile station met daarachter de access points waar het mobile station recentelijk verbinding mee heeft gehad. </p>
         <hr/>
         <div class='btn-group-xs'>
             <button id='btn-truncate-db' class='btn btn-xs btn-danger'>Database leeghalen</button>
@@ -31,8 +39,6 @@
             </tbody>
         </table>
       </div>
-      
-      
       
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

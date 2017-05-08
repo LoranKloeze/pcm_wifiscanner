@@ -1,9 +1,15 @@
+/*
+ * PCM Wifiscanner
+ * 
+ * Copyright 2017 Loran Kloeze - loran@ralon.nl
+ * Licentie: MIT
+*/
+
 $(function () {
     
     var keep_up_to_date = true;
     
     var updateSsids = function() {
-        console.log('Updating ssids');
         $.get('/api.php?act=ssids', function (d) {
             var $tbody = $('#mobile_stations tbody');
             $tbody.find('.ssids ul').html('');
@@ -23,7 +29,6 @@ $(function () {
     var updateTable = function () {
         if (keep_up_to_date === false)
             return;
-        console.log('Updating mobile stations');
         $.get('/api.php?act=mobile_stations', function (d) {
             var $tbody = $('#mobile_stations tbody');
             $tbody.find('.updated').removeClass('updated');

@@ -1,5 +1,10 @@
 <?php
-
+/*
+ * PCM Wifiscanner
+ * 
+ * Copyright 2017 Loran Kloeze - loran@ralon.nl
+ * Licentie: MIT
+*/
 switch (filter_input(INPUT_GET, 'act', FILTER_SANITIZE_STRING)) {
             case 'mobile_stations':
                 $results = returnMobileStations();
@@ -34,6 +39,7 @@ function returnMobileStations() {
     $conn->close();
     return $rows;
 }
+
 function returnSsids() {
     $conn = getDB();
     
@@ -61,12 +67,10 @@ function getDB() {
     $password = "wifiscan";
     $database = "wifiscanner";
 
-    // Create connection
     $conn = new mysqli($servername, $username, $password,$database);
 
-    // Check connection
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        die("Verbinding met de database mislukt: " . $conn->connect_error);
     } 
     
     return $conn;
